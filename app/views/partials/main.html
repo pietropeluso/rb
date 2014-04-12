@@ -1,0 +1,15 @@
+<div ng-include="'partials/navbar'"></div>
+
+<div class="row marketing">
+  <div ng-repeat="path in paths" class="path-report">
+    <h4>Starting Position: {{path.startX}}{{path.startY}}{{path.startDirection}}</h4>
+    <h5>Instructions: {{path.instructions}}</h5>
+    <p ng-repeat="position in path.route" class="step-report" ng-show="$last">
+      Final Position: {{position.x}}{{position.y}}{{position.direction}}{{position.lost}}
+    </p>
+  </div>
+</div>
+
+<div class="footer">
+  <p>♥ from the Yeoman team</p>
+</div>
